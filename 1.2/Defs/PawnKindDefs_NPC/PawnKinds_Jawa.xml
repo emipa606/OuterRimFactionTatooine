@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef Name="JawaNPCAbstractBase" Abstract="True">
+    <defaultFactionType>O21_NPC_Jawa_Faction</defaultFactionType>
+    <baseRecruitDifficulty>0.50</baseRecruitDifficulty>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <itemQuality>Normal</itemQuality>
+    <race>Alien_Jawa</race>
+    <gearHealthRange>0.5~2</gearHealthRange>
+    <invNutrition>2.55</invNutrition>
+    <inventoryOptions>
+      <skipChance>0.10</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <choiceChance>90</choiceChance>
+          <thingDef>Silver</thingDef>
+          <countRange>50~200</countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <apparelTags Inherit="false">
+      <li>JawaApparel</li>
+    </apparelTags>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelMoney>600~600</apparelMoney>
+    <weaponMoney>800~800</weaponMoney>
+    <weaponTags>
+      <li>JawaWeapons</li>
+    </weaponTags>
+    <techHediffsMoney>12000~20000</techHediffsMoney>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Outlander</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <techHediffsChance>0</techHediffsChance>
+    <apparelColor>(200,200,200)</apparelColor>
+  </PawnKindDef>
+  <PawnKindDef ParentName="JawaNPCAbstractBase">
+    <defName>O21_NPC_JawaChief</defName>
+    <label>Jawa Clan-Chief</label>
+    <labelPlural>Jawa Clan-Chiefs</labelPlural>
+    <isFighter>false</isFighter>
+    <trader>true</trader>
+    <combatPower>40</combatPower>
+  </PawnKindDef>
+  <PawnKindDef ParentName="JawaNPCAbstractBase">
+    <defName>O21_NPC_JawaTrader</defName>
+    <label>Jawa Trader</label>
+    <labelPlural>Jawa Traider</labelPlural>
+    <isFighter>true</isFighter>
+    <combatPower>40</combatPower>
+  </PawnKindDef>
+  <PawnKindDef ParentName="JawaNPCAbstractBase">
+    <defName>O21_NPC_JawaScavenger</defName>
+    <label>Jawa Scavenger</label>
+    <labelPlural>Jawa Scavengers</labelPlural>
+    <isFighter>true</isFighter>
+    <combatPower>40</combatPower>
+  </PawnKindDef>
+  <PawnKindDef ParentName="JawaNPCAbstractBase">
+    <defName>O21_NPC_JawaMechanic</defName>
+    <label>Jawa Mechanic</label>
+    <labelPlural>Jawa Mechanics</labelPlural>
+    <isFighter>true</isFighter>
+    <combatPower>40</combatPower>
+  </PawnKindDef>
+  <PawnKindDef ParentName="JawaNPCAbstractBase">
+    <defName>O21_NPC_JawaShaman</defName>
+    <label>Jawa Shaman</label>
+    <labelPlural>Jawa Shamans</labelPlural>
+    <isFighter>false</isFighter>
+    <combatPower>40</combatPower>
+    <factionLeader>true</factionLeader>
+  </PawnKindDef>
+  <PawnKindDef ParentName="JawaNPCAbstractBase">
+    <defName>O21_NPC_JawaVillager</defName>
+    <label>Jawa</label>
+    <labelPlural>Jawas</labelPlural>
+    <isFighter>false</isFighter>
+    <combatPower>40</combatPower>
+  </PawnKindDef>
+</Defs>

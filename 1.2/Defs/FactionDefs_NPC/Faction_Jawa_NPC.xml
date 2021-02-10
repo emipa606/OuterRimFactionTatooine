@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FactionDef>
+    <defName>O21_NPC_Jawa_Faction</defName>
+    <label>Jawa Clan</label>
+    <description>Jawas lived in separate clan families, each with distinct, separate territories for living and scavenging. The Jawa Clan was overseen by a female Shaman.</description>
+    <pawnSingular>Jawa</pawnSingular>
+    <pawnsPlural>Jawas</pawnsPlural>
+    <listOrderPriority>50</listOrderPriority>
+    <settlementGenerationWeight>0.5</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <earliestRaidDays>1800</earliestRaidDays>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canSiege>false</canSiege>
+    <canStageAttacks>false</canStageAttacks>
+    <leaderTitle>shaman</leaderTitle>
+    <permanentEnemy>false</permanentEnemy>
+    <fixedName>Jawa Clan</fixedName>
+    <factionIconPath>World/JawaBaseIcon</factionIconPath>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <techLevel>Spacer</techLevel>
+    <startingGoodwill>
+      <min>20</min>
+      <max>20</max>
+    </startingGoodwill>
+    <naturalColonyGoodwill>
+      <min>50</min>
+      <max>50</max>
+    </naturalColonyGoodwill>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Outlander</li>
+        </categories>
+        <commonality>1.00</commonality>
+      </li>
+    </backstoryFilters>
+    <geneticVariance>0.8</geneticVariance>
+    <hairTags>
+      <li>Urban</li>
+    </hairTags>
+    <caravanTraderKinds>
+      <li>Caravan_JawaSandcrawler</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+      <li>Caravan_JawaSandcrawler</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Jawa</li>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>0~60</allowedArrivalTemperatureRange>
+    <goodwillDailyGain>0.20</goodwillDailyGain>
+    <goodwillDailyFall>0.20</goodwillDailyFall>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <!-- Normal fights, standard mix -->
+        <kindDef>Combat</kindDef>
+        <options>
+          <O21_NPC_JawaTrader>10</O21_NPC_JawaTrader>
+          <O21_NPC_JawaScavenger>10</O21_NPC_JawaScavenger>
+          <O21_NPC_JawaMechanic>10</O21_NPC_JawaMechanic>
+          <O21_NPC_JawaShaman>5</O21_NPC_JawaShaman>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <O21_NPC_JawaTrader>20</O21_NPC_JawaTrader>
+          <O21_NPC_JawaScavenger>10</O21_NPC_JawaScavenger>
+          <O21_NPC_JawaMechanic>10</O21_NPC_JawaMechanic>
+          <O21_NPC_JawaShaman>5</O21_NPC_JawaShaman>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <O21_NPC_JawaChief>1</O21_NPC_JawaChief>
+        </traders>
+        <carriers>
+          <Dromedary>5</Dromedary>
+        </carriers>
+        <guards>
+          <O21_NPC_JawaTrader>10</O21_NPC_JawaTrader>
+          <O21_NPC_JawaScavenger>3</O21_NPC_JawaScavenger>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <O21_NPC_JawaTrader>10</O21_NPC_JawaTrader>
+          <O21_NPC_JawaVillager>10</O21_NPC_JawaVillager>
+          <O21_NPC_JawaMechanic>10</O21_NPC_JawaMechanic>
+          <O21_NPC_JawaShaman>10</O21_NPC_JawaShaman>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <settlementTexturePath>World/JawaSettlement</settlementTexturePath>
+  </FactionDef>
+</Defs>
